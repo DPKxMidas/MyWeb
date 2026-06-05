@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:white;
+}
+
+/* MENU */
+nav{
+    background-color:black;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    padding:15px 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav ul li:hover{
+    background-color:#555;
+}
+
+.search{
+    margin-left:auto;
+}
+
+/* PHẦN GIỚI THIỆU */
+.band{
+    width:70%;
+    margin:50px auto;
+    text-align:center;
+}
+
+.band h1{
+    letter-spacing:5px;
+    font-weight:normal;
+    margin-bottom:20px;
+}
+
+.slogan{
+    color:gray;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+.description{
+    text-align:justify;
+    line-height:1.7;
+}
+
+/* THÀNH VIÊN */
+.members{
+    width:70%;
+    margin:50px auto;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.member img{
+    width:180px;
+    margin-top:15px;
+}
