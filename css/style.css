@@ -7,9 +7,9 @@
 /* Toàn trang */
 body {
 
-    background-color: #EEF7FF;
+    background-color: #FFF8E7;
 
-    color: #333333;
+    color: #333;
 
     font-family: Arial, sans-serif;
 
@@ -21,11 +21,13 @@ body {
 
 
 
+
+
 /* Header */
 
 .site-header {
 
-    background-color: #0077B6;
+    background-color: #8B0000;
 
     color: white;
 
@@ -37,11 +39,13 @@ body {
 
 
 
-/* Tiêu đề chính */
+
+
+/* Tiêu đề */
 
 #main-title {
 
-    color: yellow;
+    color: #FFD166;
 
     font-size: 40px;
 
@@ -52,11 +56,12 @@ body {
 
 
 
+
 /* Menu */
 
 .main-nav {
 
-    background-color: #023E8A;
+    background-color: #5A0000;
 
     padding: 15px;
 
@@ -66,7 +71,9 @@ body {
 
 
 
-/* Selector kết hợp */
+
+
+/* Link menu */
 
 .main-nav a {
 
@@ -82,11 +89,18 @@ body {
 
 
 
+
+
+/* Hover link */
+
 .main-nav a:hover {
 
-    color: yellow;
+    color: #FFD166;
+
+    text-decoration: underline;
 
 }
+
 
 
 
@@ -106,6 +120,7 @@ main {
 
 
 
+
 /* Ảnh bìa */
 
 .hero {
@@ -118,7 +133,7 @@ main {
 
     margin: 20px auto;
 
-    border-radius: 10px;
+    border-radius: 12px;
 
 }
 
@@ -140,7 +155,7 @@ main {
 
 
 
-/* Phần giới thiệu */
+/* About */
 
 #about {
 
@@ -157,11 +172,12 @@ main {
 
 
 
-/* Danh sách chủ đề */
+
+/* Danh sách */
 
 .topic-list {
 
-    border: 2px solid #0077B6;
+    border: 2px solid #8B0000;
 
     padding: 20px;
 
@@ -172,7 +188,6 @@ main {
 
 
 
-/* Selector kết hợp */
 
 .topic-list li {
 
@@ -184,7 +199,7 @@ main {
 
 
 
-/* Style Guide */
+/* Style guide */
 
 #style-guide {
 
@@ -201,11 +216,13 @@ main {
 
 
 
+
 .style-box {
 
     text-align: center;
 
 }
+
 
 
 
@@ -236,31 +253,29 @@ main {
 
     border-radius: 10px;
 
-    color: white;
-
     font-weight: bold;
+
+    color: white;
 
 }
 
 
 
 
-/* Màu chính */
 
 .primary {
 
-    background-color: #0077B6;
+    background-color: #8B0000;
 
 }
 
 
 
 
-/* Màu nhấn */
 
 .accent {
 
-    background-color: #FFD60A;
+    background-color: #FFD166;
 
     color: black;
 
@@ -269,11 +284,10 @@ main {
 
 
 
-/* Màu nền */
 
 .background {
 
-    background-color: #EEF7FF;
+    background-color: #FFF8E7;
 
     color: black;
 
@@ -282,8 +296,6 @@ main {
 
 
 
-
-/* Màu nút CTA */
 
 .button {
 
@@ -311,7 +323,116 @@ main {
 
 
 
-/* Nút kêu gọi hành động */
+/* Gallery */
+
+.gallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+
+
+.gallery figure {
+
+    width: 300px;
+
+    margin: 0;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+.gallery img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+
+
+
+figcaption {
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+
+
+
+
+/* Form */
+
+.contact-form {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+}
+
+
+
+
+
+.contact-form textarea {
+
+    height: 120px;
+
+}
+
+
+
+
+
+/* Nút CTA */
 
 .cta {
 
@@ -334,136 +455,12 @@ main {
 
 
 
-.cta:hover {
-
-    background-color: #C1121F;
-
-}
-
-
-
-
-
-
-/* Contact */
-
-#contact {
-
-    background-color: white;
-
-    padding: 20px;
-
-    margin-top: 20px;
-
-    border-radius: 10px;
-
-}
-
-
-
-
-/* Footer */
-
-footer {
-
-    background-color: #023E8A;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 15px;
-
-    margin-top: 30px;
-    
-
-}
-/* Thư viện ảnh */
-
-.gallery {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-figure {
-
-    width: 300px;
-
-    margin: 0;
-
-    background-color: white;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
-}
-
-
-
-
-/* Ảnh responsive */
-
-figure img {
-
-    width: 100%;
-
-    height: auto;
-
-    display: block;
-
-}
-
-
-
-
-
-figcaption {
-
-    padding: 15px;
-
-    text-align: center;
-
-    font-size: 16px;
-
-    color: #333;
-
-}
-
-
-
-
-
-/* Hover link */
-
-.main-nav a:hover {
-
-    color: #FFD60A;
-
-    text-decoration: underline;
-
-}
-
-
-
-
 
 /* Hover nút */
 
 .cta:hover {
 
-    background-color: #c1121f;
+    background-color: #C1121F;
 
     transform: scale(1.05);
 
@@ -475,126 +472,11 @@ figcaption {
 
 
 
-/* Responsive điện thoại */
-
-@media(max-width:600px){
-
-
-    .gallery {
-
-        flex-direction: column;
-
-        align-items: center;
-
-    }
-
-
-    figure {
-
-        width: 90%;
-
-    }
-
-
-}
-/* FORM */
-
-.contact-form {
-
-    max-width: 500px;
-
-    margin: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-}
-
-
-.contact-form input,
-.contact-form textarea {
-
-
-    padding: 12px;
-
-    border-radius: 8px;
-
-    border: 1px solid #ccc;
-
-    font-size: 16px;
-
-}
-
-
-.contact-form textarea {
-
-    height: 120px;
-
-}
-
-
-
-
-
-/* GALLERY */
-
-.gallery {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-.gallery figure {
-
-    width: 300px;
-
-    margin: 0;
-
-}
-
-
-
-.gallery img {
-
-
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 10px;
-
-}
-
-
-
-figcaption {
-
-    text-align: center;
-
-    padding: 10px;
-
-}
-
-
-
-
-
-/* FOOTER */
+/* Footer */
 
 footer {
 
-    background-color: #023E8A;
+    background-color: #5A0000;
 
     color: white;
 
@@ -610,7 +492,7 @@ footer {
 
 
 
-/* TABLET */
+/* Tablet */
 
 @media (max-width: 900px) {
 
@@ -622,9 +504,9 @@ footer {
     }
 
 
-    .main-nav a {
+    .style-image {
 
-        margin: 8px;
+        width: 70%;
 
     }
 
@@ -635,17 +517,9 @@ footer {
 
 
 
-/* MOBILE */
+/* Điện thoại */
 
 @media (max-width: 600px) {
-
-
-    .site-header {
-
-        padding: 20px;
-
-    }
-
 
 
     #main-title {
@@ -656,9 +530,7 @@ footer {
 
 
 
-
     .main-nav {
-
 
         display: flex;
 
@@ -677,12 +549,20 @@ footer {
 
 
 
+    main {
+
+        width: 95%;
+
+    }
+
+
+
+
     .hero {
 
         width: 100%;
 
     }
-
 
 
 
@@ -695,6 +575,7 @@ footer {
 
 
 
+
     .gallery figure {
 
         width: 100%;
@@ -703,12 +584,12 @@ footer {
 
 
 
-    main {
 
-        width: 95%;
+    .style-image {
+
+        width: 100%;
 
     }
-
 
 
 }
