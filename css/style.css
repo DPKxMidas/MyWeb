@@ -497,3 +497,218 @@ figcaption {
 
 
 }
+/* FORM */
+
+.contact-form {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+}
+
+
+.contact-form textarea {
+
+    height: 120px;
+
+}
+
+
+
+
+
+/* GALLERY */
+
+.gallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.gallery figure {
+
+    width: 300px;
+
+    margin: 0;
+
+}
+
+
+
+.gallery img {
+
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+
+}
+
+
+
+figcaption {
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+footer {
+
+    background-color: #023E8A;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+
+}
+
+
+
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+
+    .gallery figure {
+
+        width: 45%;
+
+    }
+
+
+    .main-nav a {
+
+        margin: 8px;
+
+    }
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+
+    .site-header {
+
+        padding: 20px;
+
+    }
+
+
+
+    #main-title {
+
+        font-size: 28px;
+
+    }
+
+
+
+
+    .main-nav {
+
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+
+    .main-nav a {
+
+        margin: 5px;
+
+    }
+
+
+
+
+    .hero {
+
+        width: 100%;
+
+    }
+
+
+
+
+
+    .gallery {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .gallery figure {
+
+        width: 100%;
+
+    }
+
+
+
+    main {
+
+        width: 95%;
+
+    }
+
+
+
+}
