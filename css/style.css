@@ -673,3 +673,58 @@ footer {
 
 
 }
+/* Chủ đề tối */
+
+.dark-mode {
+
+    background-color:#111827;
+
+    color:#f8fafc;
+
+}
+
+
+.dark-mode .site-header {
+
+    background-color:#020617;
+
+}
+
+
+.dark-mode #about,
+.dark-mode #style-guide,
+.dark-mode .gallery figure {
+
+    background-color:#1e293b;
+
+    color:white;
+
+}
+
+
+
+/* Chủ đề ấm */
+
+.warm-mode {
+
+    background-color:#fff7ed;
+
+    color:#7c2d12;
+
+}
+
+
+.warm-mode .site-header {
+
+    background-color:#c2410c;
+
+}
+
+
+.warm-mode #about,
+.warm-mode #style-guide,
+.warm-mode .gallery figure {
+
+    background-color:#ffedd5;
+
+}
