@@ -25,8 +25,9 @@ console.log("Kiểu dữ liệu:", typeof topic);
 
 
 
+
 // ======================
-// Đổi nội dung tiêu đề
+// Đổi nội dung
 // ======================
 
 
@@ -95,7 +96,6 @@ if(helloBtn && helloResult){
 
 
 
-
 // ======================
 // Ẩn hiện giới thiệu
 // ======================
@@ -149,7 +149,6 @@ if(toggleAboutBtn && aboutContent){
 
 
 
-
 // ======================
 // MENU MOBILE
 // ======================
@@ -165,7 +164,6 @@ document.getElementById("mainMenu");
 
 
 if(menuToggle && mainMenu){
-
 
 
     menuToggle.addEventListener("click",function(){
@@ -192,14 +190,13 @@ if(menuToggle && mainMenu){
         }
 
 
-
     });
 
 
 
 
 
-    // Bấm link tự đóng menu
+    // Chọn link tự đóng menu
 
 
     const links =
@@ -240,7 +237,7 @@ if(menuToggle && mainMenu){
 
 
 // ======================
-// ĐỔI CHỦ ĐỀ WEBSITE
+// ĐỔI CHỦ ĐỀ
 // ======================
 
 
@@ -252,15 +249,18 @@ document.getElementById("themeSelect");
 if(themeSelect){
 
 
-
     themeSelect.addEventListener("change",function(){
 
 
 
         document.body.classList.remove(
+
             "dark-mode",
+
             "warm-mode"
+
         );
+
 
 
 
@@ -269,11 +269,98 @@ if(themeSelect){
 
 
             document.body.classList.add(
+
                 themeSelect.value
+
             );
 
 
         }
+
+
+
+    });
+
+
+}
+
+
+
+
+
+
+
+
+
+// ======================
+// TÌM KIẾM NỘI DUNG
+// ======================
+
+
+const searchInput =
+document.getElementById("searchInput");
+
+
+const searchItems =
+document.querySelectorAll(".search-item");
+
+
+
+if(searchInput && searchItems.length > 0){
+
+
+
+    searchInput.addEventListener("keyup",function(){
+
+
+
+        const keyword =
+
+        searchInput.value
+
+        .toLowerCase()
+
+        .trim();
+
+
+
+
+
+        searchItems.forEach(function(item){
+
+
+
+            const text =
+
+            item.textContent
+
+            .toLowerCase();
+
+
+
+
+
+            if(text.includes(keyword)){
+
+
+
+                item.style.display = "";
+
+
+
+            }else{
+
+
+
+                item.style.display = "none";
+
+
+
+            }
+
+
+
+        });
 
 
 
@@ -307,7 +394,6 @@ if(contactForm){
     contactForm.addEventListener("submit",function(e){
 
 
-
         e.preventDefault();
 
 
@@ -317,73 +403,7 @@ if(contactForm){
         );
 
 
-
     });
-
-
-
-}
-// ======================
-// Tìm kiếm nội dung
-// ======================
-
-
-const searchInput =
-document.getElementById("searchInput");
-
-
-const searchItems =
-document.querySelectorAll(".search-item");
-
-
-
-if(searchInput && searchItems.length > 0){
-
-
-
-    searchInput.addEventListener("keyup",function(){
-
-
-
-        const keyword =
-        searchInput.value
-        .toLowerCase()
-        .trim();
-
-
-
-
-        searchItems.forEach(function(item){
-
-
-
-            const text =
-            item.textContent
-            .toLowerCase();
-
-
-
-
-            if(text.includes(keyword)){
-
-
-                item.style.display = "";
-
-            }else{
-
-
-                item.style.display = "none";
-
-            }
-
-
-
-        });
-
-
-
-    });
-
 
 
 }
