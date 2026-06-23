@@ -1,7 +1,7 @@
 // Thông tin website cá nhân
 let tenWebsite = "Ẩm thực Việt Nam";
 let chuDe = "Khám phá hương vị truyền thống và văn hóa món ăn Việt";
-let soLuongAnh = 15;
+let soLuongAnh = 6;
 let trangThaiHoanThanh = true;
 
 // In thông tin ra Console
