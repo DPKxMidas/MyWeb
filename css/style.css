@@ -741,3 +741,22 @@ footer {
 
 
 }
+#searchInput {
+
+
+    padding:12px 15px;
+
+    width:300px;
+
+    max-width:90%;
+
+    border-radius:8px;
+
+    border:none;
+
+    margin:15px;
+
+    font-size:16px;
+
+
+}
