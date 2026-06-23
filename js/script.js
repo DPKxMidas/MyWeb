@@ -1,4 +1,6 @@
+// ======================
 // Console
+// ======================
 
 const siteName = "Ẩm thực Việt Nam";
 
@@ -9,24 +11,23 @@ let imageCount = 5;
 let isReady = true;
 
 
+console.log("Website:", siteName);
 
-console.log("Website:",siteName);
+console.log("Chủ đề:", topic);
 
-console.log("Chủ đề:",topic);
+console.log("Số ảnh:", imageCount);
 
-console.log("Số ảnh:",imageCount);
+console.log("Đã sẵn sàng dùng JS?", isReady);
 
-console.log("Đã sẵn sàng dùng JS?",isReady);
-
-console.log("Kiểu dữ liệu:",typeof topic);
-
+console.log("Kiểu dữ liệu:", typeof topic);
 
 
 
 
 
-
-// Đổi nội dung
+// ======================
+// Đổi nội dung tiêu đề
+// ======================
 
 
 const mainTitle =
@@ -41,12 +42,12 @@ document.getElementById("welcomeText");
 if(mainTitle && welcomeText){
 
 
-mainTitle.textContent =
-"Ẩm thực Việt Nam ";
+    mainTitle.textContent =
+    "Ẩm thực Việt Nam";
 
 
-welcomeText.textContent =
-"Chào mừng bạn khám phá món ngon Việt Nam";
+    welcomeText.textContent =
+    "Chào mừng bạn khám phá món ngon Việt Nam";
 
 
 }
@@ -58,7 +59,9 @@ welcomeText.textContent =
 
 
 
+// ======================
 // Nút lời chào
+// ======================
 
 
 const helloBtn =
@@ -73,14 +76,14 @@ document.getElementById("helloResult");
 if(helloBtn && helloResult){
 
 
-helloBtn.addEventListener("click",function(){
+    helloBtn.addEventListener("click",function(){
 
 
-helloResult.textContent =
-"Cảm ơn bạn đã ghé thăm website Ẩm thực Việt Nam!";
+        helloResult.textContent =
+        "Cảm ơn bạn đã ghé thăm website Ẩm thực Việt Nam!";
 
 
-});
+    });
 
 
 }
@@ -92,7 +95,10 @@ helloResult.textContent =
 
 
 
+
+// ======================
 // Ẩn hiện giới thiệu
+// ======================
 
 
 const toggleAboutBtn =
@@ -107,13 +113,31 @@ document.getElementById("aboutContent");
 if(toggleAboutBtn && aboutContent){
 
 
-toggleAboutBtn.addEventListener("click",function(){
+    toggleAboutBtn.addEventListener("click",function(){
 
 
-aboutContent.classList.toggle("hidden");
+        aboutContent.classList.toggle("hidden");
 
 
-});
+
+        if(aboutContent.classList.contains("hidden")){
+
+
+            toggleAboutBtn.textContent =
+            "Xem giới thiệu";
+
+
+        }else{
+
+
+            toggleAboutBtn.textContent =
+            "Ẩn giới thiệu";
+
+
+        }
+
+
+    });
 
 
 }
@@ -125,7 +149,10 @@ aboutContent.classList.toggle("hidden");
 
 
 
-// MENU MỞ ĐÓNG
+
+// ======================
+// MENU MOBILE
+// ======================
 
 
 const menuToggle =
@@ -141,105 +168,158 @@ if(menuToggle && mainMenu){
 
 
 
-menuToggle.addEventListener("click",function(){
+    menuToggle.addEventListener("click",function(){
+
+
+        mainMenu.classList.toggle("active");
 
 
 
-mainMenu.classList.toggle("active");
+        if(mainMenu.classList.contains("active")){
+
+
+            menuToggle.textContent =
+            "Đóng menu";
+
+
+        }else{
+
+
+            menuToggle.textContent =
+            "☰ Menu";
+
+
+        }
 
 
 
-
-if(mainMenu.classList.contains("active")){
-
-
-menuToggle.textContent =
-"Đóng menu";
-
-
-}else{
-
-
-menuToggle.textContent =
-"☰ Menu";
-
-
-}
-
-
-
-});
-
-
+    });
 
 
 
 
 
-// click link tự đóng menu
+    // Bấm link tự đóng menu
 
 
-const links =
-mainMenu.querySelectorAll("a");
-
-
-
-links.forEach(function(link){
+    const links =
+    mainMenu.querySelectorAll("a");
 
 
 
-link.addEventListener("click",function(){
+    links.forEach(function(link){
 
 
 
-mainMenu.classList.remove("active");
+        link.addEventListener("click",function(){
 
 
-menuToggle.textContent =
-"☰ Menu";
+            mainMenu.classList.remove("active");
 
 
-});
+            menuToggle.textContent =
+            "☰ Menu";
+
+
+        });
 
 
 
-});
+    });
 
 
 
 }
-// Đổi giao diện
+
+
+
+
+
+
+
+
+
+// ======================
+// ĐỔI CHỦ ĐỀ WEBSITE
+// ======================
+
 
 const themeSelect =
 document.getElementById("themeSelect");
 
 
+
 if(themeSelect){
 
 
-themeSelect.addEventListener("change",function(){
 
-
-document.body.classList.remove(
-"dark-mode",
-"warm-mode"
-);
+    themeSelect.addEventListener("change",function(){
 
 
 
-if(themeSelect.value !== ""){
+        document.body.classList.remove(
+            "dark-mode",
+            "warm-mode"
+        );
 
 
-document.body.classList.add(
-themeSelect.value
-);
+
+
+        if(themeSelect.value !== ""){
+
+
+            document.body.classList.add(
+                themeSelect.value
+            );
+
+
+        }
+
+
+
+    });
+
 
 
 }
 
 
 
-});
+
+
+
+
+
+
+// ======================
+// Xử lý form
+// ======================
+
+
+const contactForm =
+document.querySelector(".contact-form");
+
+
+
+if(contactForm){
+
+
+    contactForm.addEventListener("submit",function(e){
+
+
+
+        e.preventDefault();
+
+
+
+        alert(
+        "Cảm ơn bạn đã gửi thông tin!"
+        );
+
+
+
+    });
+
 
 
 }
