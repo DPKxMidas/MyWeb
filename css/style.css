@@ -1,19 +1,23 @@
 /* Reset */
+
 * {
+
     box-sizing: border-box;
+
 }
 
 
 /* Toàn trang */
+
 body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
 
     background-color: #FFF8E7;
 
     color: #333;
-
-    font-family: Arial, sans-serif;
-
-    margin: 0;
 
     line-height: 1.6;
 
@@ -22,8 +26,8 @@ body {
 
 
 
-
 /* Header */
+
 
 .site-header {
 
@@ -43,6 +47,7 @@ body {
 
 /* Tiêu đề */
 
+
 #mainTitle {
 
     color: #FFD166;
@@ -57,15 +62,30 @@ body {
 
 
 
-/* Navigation */
 
-.main-nav {
+/* Nút menu */
 
-    background-color: #5A0000;
 
-    padding: 15px;
+.menu-toggle {
 
-    text-align: center;
+
+    display: none;
+
+
+    background-color: #E63946;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
 
 }
 
@@ -73,7 +93,26 @@ body {
 
 
 
-.main-nav a {
+
+/* Menu chính */
+
+
+.main-menu {
+
+
+    background-color: #5A0000;
+
+    padding: 15px;
+
+    text-align: center;
+
+
+}
+
+
+
+.main-menu a {
+
 
     color: white;
 
@@ -83,19 +122,21 @@ body {
 
     font-weight: bold;
 
+
 }
 
 
 
+.main-menu a:hover {
 
-
-.main-nav a:hover {
 
     color: #FFD166;
 
-    text-decoration: underline;
 
 }
+
+
+
 
 
 
@@ -103,7 +144,9 @@ body {
 
 /* Nội dung */
 
+
 main {
+
 
     width: 90%;
 
@@ -111,15 +154,19 @@ main {
 
     margin: auto;
 
+
 }
 
 
 
 
 
-/* Ảnh bìa */
+
+/* Hero */
+
 
 .hero {
+
 
     width: 100%;
 
@@ -131,19 +178,23 @@ main {
 
     border-radius: 12px;
 
-}
 
+}
 
 
 
 
 .description {
 
+
     text-align: center;
 
     font-size: 18px;
 
+
 }
+
+
 
 
 
@@ -151,7 +202,9 @@ main {
 
 /* Giới thiệu */
 
+
 #about {
+
 
     background-color: white;
 
@@ -160,6 +213,7 @@ main {
     margin-top: 20px;
 
     border-radius: 10px;
+
 
 }
 
@@ -169,11 +223,13 @@ main {
 
 .topic-list {
 
+
     border: 2px solid #8B0000;
 
     padding: 20px;
 
     border-radius: 10px;
+
 
 }
 
@@ -183,19 +239,9 @@ main {
 
 .topic-list li {
 
+
     margin: 10px;
 
-}
-
-
-
-
-
-/* Nút ẩn hiện */
-
-#toggleAboutBtn {
-
-    margin-top: 15px;
 
 }
 
@@ -203,164 +249,19 @@ main {
 
 
 
-/* Ẩn nội dung bằng JavaScript */
+
+/* Ẩn hiện */
+
 
 .hidden {
 
+
     display: none !important;
 
-}
-
-
-
-
-
-/* Bảng phong cách */
-
-#style-guide {
-
-    background-color: white;
-
-    padding: 20px;
-
-    margin-top: 20px;
-
-    border-radius: 10px;
 
 }
 
 
-
-
-
-.style-box {
-
-    text-align: center;
-
-}
-
-
-
-
-
-.style-image {
-
-    width: 45%;
-
-    margin: 10px;
-
-    border-radius: 10px;
-
-}
-
-
-
-
-
-/* Gallery */
-
-.gallery {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-
-
-.gallery figure {
-
-    width: 300px;
-
-    margin: 0;
-
-    background-color: white;
-
-    border-radius: 10px;
-
-    overflow: hidden;
-
-}
-
-
-
-
-
-.gallery img {
-
-    width: 100%;
-
-    height: auto;
-
-    display: block;
-
-}
-
-
-
-
-
-figcaption {
-
-    text-align: center;
-
-    padding: 10px;
-
-}
-
-
-
-
-
-/* Form */
-
-.contact-form {
-
-    max-width: 500px;
-
-    margin: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-}
-
-
-
-
-
-.contact-form input,
-.contact-form textarea {
-
-    padding: 12px;
-
-    border: 1px solid #ccc;
-
-    border-radius: 8px;
-
-    font-size: 16px;
-
-}
-
-
-
-
-
-.contact-form textarea {
-
-    height: 120px;
-
-}
 
 
 
@@ -368,9 +269,22 @@ figcaption {
 
 /* Nút */
 
-.cta,
+
+button {
+
+
+    cursor: pointer;
+
+
+}
+
+
+
+
 #helloBtn,
-#toggleAboutBtn {
+#toggleAboutBtn,
+.cta {
+
 
     background-color: #E63946;
 
@@ -382,27 +296,201 @@ figcaption {
 
     border-radius: 8px;
 
-    cursor: pointer;
-
     font-size: 16px;
+
 
 }
 
 
 
 
-
-.cta:hover,
 #helloBtn:hover,
-#toggleAboutBtn:hover {
+#toggleAboutBtn:hover,
+.cta:hover {
+
 
     background-color: #C1121F;
 
-    transform: scale(1.05);
-
-    transition: 0.3s;
 
 }
+
+
+
+
+
+
+
+/* Style guide */
+
+
+#style-guide {
+
+
+    background-color: white;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+
+}
+
+
+
+
+.style-box {
+
+
+    text-align: center;
+
+
+}
+
+
+
+
+.style-image {
+
+
+    width: 45%;
+
+    margin: 10px;
+
+    border-radius: 10px;
+
+
+}
+
+
+
+
+
+
+
+/* Gallery */
+
+
+.gallery {
+
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+
+}
+
+
+
+
+
+.gallery figure {
+
+
+    width: 300px;
+
+    background-color: white;
+
+    margin: 0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+
+}
+
+
+
+
+
+.gallery img {
+
+
+    width: 100%;
+
+    display: block;
+
+
+}
+
+
+
+
+
+figcaption {
+
+
+    text-align: center;
+
+    padding: 10px;
+
+
+}
+
+
+
+
+
+
+
+/* Form */
+
+
+.contact-form {
+
+
+    max-width: 500px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+
+}
+
+
+
+
+
+.contact-form input,
+.contact-form textarea {
+
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+
+}
+
+
+
+
+.contact-form textarea {
+
+
+    height: 120px;
+
+
+}
+
+
+
 
 
 
@@ -410,7 +498,9 @@ figcaption {
 
 /* Footer */
 
+
 footer {
+
 
     background-color: #5A0000;
 
@@ -422,31 +512,6 @@ footer {
 
     margin-top: 30px;
 
-}
-
-
-
-
-
-/* Tablet */
-
-@media (max-width: 900px) {
-
-
-    .gallery figure {
-
-        width: 45%;
-
-    }
-
-
-
-    .style-image {
-
-        width: 70%;
-
-    }
-
 
 }
 
@@ -457,32 +522,70 @@ footer {
 
 
 
-/* Điện thoại */
 
-@media (max-width: 600px) {
+/* Responsive mobile */
+
+
+@media(max-width:600px){
+
 
 
     #mainTitle {
 
-        font-size: 28px;
+
+        font-size:28px;
+
 
     }
 
 
 
-    .main-nav {
+    .menu-toggle {
 
-        display: flex;
 
-        flex-direction: column;
+        display:inline-block;
+
+        margin-top:15px;
+
 
     }
 
 
 
-    .main-nav a {
+    .main-menu {
 
-        margin: 5px;
+
+        display:none;
+
+        flex-direction:column;
+
+
+    }
+
+
+
+
+    /* class JS thêm */
+
+    .main-menu.active {
+
+
+        display:flex;
+
+
+    }
+
+
+
+
+
+    .main-menu a {
+
+
+        margin:10px;
+
+        display:block;
+
 
     }
 
@@ -490,23 +593,20 @@ footer {
 
     main {
 
-        width: 95%;
+
+        width:95%;
+
 
     }
 
-
-
-    .hero {
-
-        width: 100%;
-
-    }
 
 
 
     .gallery {
 
-        flex-direction: column;
+
+        flex-direction:column;
+
 
     }
 
@@ -514,16 +614,23 @@ footer {
 
     .gallery figure {
 
-        width: 100%;
+
+        width:100%;
+
 
     }
+
 
 
 
     .style-image {
 
-        width: 100%;
+
+        width:100%;
+
 
     }
+
+
 
 }
