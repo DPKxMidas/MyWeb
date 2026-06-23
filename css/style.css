@@ -1,423 +1,401 @@
-<!DOCTYPE html>
-<html lang="vi">
+*{
 
-<head>
+box-sizing:border-box;
 
-<meta charset="UTF-8">
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ẩm thực Việt Nam</title>
 
-<link rel="stylesheet" href="../css/style.css">
+body{
 
-</head>
+margin:0;
 
+font-family:Arial,sans-serif;
 
-<body>
+background:#FFF8E7;
 
+color:#333;
 
-<header class="site-header">
+line-height:1.6;
 
+}
 
-<h1 id="mainTitle">
-Ẩm thực Việt Nam
-</h1>
 
 
-<p id="welcomeText">
-Chào mừng bạn đến với Ẩm thực Việt Nam
-</p>
+.site-header{
 
+background:#8B0000;
 
-<p>
-Khám phá hương vị truyền thống và văn hóa món ăn Việt
-</p>
+color:white;
 
+text-align:center;
 
+padding:30px;
 
-<button id="helloBtn">
+}
 
-Nhấn để xem lời chào
 
-</button>
 
+#mainTitle{
 
-<p id="helloResult"></p>
+color:#FFD166;
 
+font-size:40px;
 
+}
 
 
 
-<!-- Nút menu -->
 
-<button id="menuToggle" class="menu-toggle">
+/* MENU */
 
-☰ Menu
+.menu-toggle{
 
-</button>
 
+display:none;
 
+background:#E63946;
 
-</header>
+color:white;
 
+border:none;
 
+padding:12px 20px;
 
+border-radius:8px;
 
+cursor:pointer;
 
 
+}
 
 
-<!-- Menu -->
 
-<nav id="mainMenu" class="main-menu">
 
+.main-menu{
 
-<a href="#home">
-Trang chủ
-</a>
 
+background:#5A0000;
 
-<a href="#about">
-Giới thiệu
-</a>
+padding:15px;
 
+text-align:center;
 
-<a href="#gallery">
-Hình ảnh
-</a>
 
+}
 
-<a href="#style-guide">
-Phong cách
-</a>
 
 
-<a href="#contact">
-Liên hệ
-</a>
+.main-menu a{
 
 
-</nav>
+color:white;
 
+text-decoration:none;
 
+margin:15px;
 
+font-weight:bold;
 
 
+}
 
 
 
+.main-menu a:hover{
 
-<main>
 
+color:#FFD166;
 
 
+}
 
 
-<section id="home">
 
 
-<img
+main{
 
-class="hero"
 
-src="../img/hero.jpg"
+width:90%;
 
-alt="Ẩm thực Việt Nam"
+max-width:1000px;
 
+margin:auto;
 
->
 
+}
 
 
-<p class="description">
 
 
-Ẩm thực Việt Nam nổi tiếng với sự đa dạng,
-hương vị đặc trưng và nét văn hóa riêng.
+.hero{
 
 
-</p>
+width:100%;
 
+margin:20px auto;
 
+border-radius:12px;
 
-</section>
 
+}
 
 
 
 
+.description{
 
 
+text-align:center;
 
 
+}
 
-<section id="about">
 
 
-<h2>
-Giới thiệu
-</h2>
 
 
 
-<div id="aboutContent" class="topic-list">
 
+#about,
+#style-guide{
 
-<p>
 
-Website Ẩm thực Việt Nam giúp khám phá
-những món ăn truyền thống Việt Nam.
+background:white;
 
-</p>
+padding:20px;
 
+margin-top:20px;
 
-<ul>
+border-radius:10px;
 
-<li>Phở truyền thống</li>
 
-<li>Bánh mì Việt Nam</li>
+}
 
-<li>Món ăn vùng miền</li>
 
-</ul>
 
 
-</div>
 
+.topic-list{
 
 
-<button id="toggleAboutBtn">
+border:2px solid #8B0000;
 
-Ẩn/Hiện giới thiệu
+padding:20px;
 
-</button>
 
+}
 
-</section>
 
 
 
+.hidden{
 
 
+display:none;
 
+}
 
 
 
-<section id="style-guide">
 
 
-<h2>
-Bảng phong cách thiết kế
-</h2>
+.style-box{
 
 
+text-align:center;
 
-<div class="style-box">
 
+}
 
-<h3>
-Chủ đề: Ẩm thực Việt Nam
-</h3>
 
 
-<p>
 
-Thiết kế lấy cảm hứng từ món ăn,
-văn hóa và màu sắc Việt Nam.
+.style-image{
 
-</p>
 
+width:45%;
 
+margin:10px;
 
+border-radius:10px;
 
-<img
 
-class="style-image"
+}
 
-src="../img/detail-1.jpg"
 
-alt="Món ăn"
 
->
 
+.gallery{
 
 
+display:flex;
 
-<img
+gap:20px;
 
-class="style-image"
+flex-wrap:wrap;
 
-src="../img/detail-2.jpg"
 
-alt="Ẩm thực"
+}
 
->
 
 
+.gallery figure{
 
-</div>
 
+width:300px;
 
-</section>
+background:white;
 
+border-radius:10px;
 
+overflow:hidden;
 
 
+}
 
 
 
+.gallery img{
 
 
-<section id="gallery">
+width:100%;
 
 
-<h2>
-Thư viện ảnh
-</h2>
+}
 
 
 
-<div class="gallery">
 
+.contact-form{
 
-<figure>
 
-<img src="../img/hero.jpg">
+display:flex;
 
-<figcaption>
-Hương vị Việt Nam
-</figcaption>
+flex-direction:column;
 
-</figure>
+gap:12px;
 
 
+}
 
 
-<figure>
 
-<img src="../img/detail-1.jpg">
 
-<figcaption>
-Món ăn truyền thống
-</figcaption>
+.contact-form input,
+.contact-form textarea{
 
-</figure>
 
+padding:12px;
 
 
+}
 
 
-<figure>
 
-<img src="../img/detail-2.jpg">
 
-<figcaption>
-Đặc sản Việt Nam
-</figcaption>
+.cta,
+#helloBtn,
+#toggleAboutBtn{
 
-</figure>
 
+background:#E63946;
 
+color:white;
 
+border:none;
 
+padding:12px 25px;
 
-<figure>
+border-radius:8px;
 
-<img src="../img/detail-3.jpg">
 
-<figcaption>
-Văn hóa ẩm thực
-</figcaption>
+}
 
-</figure>
 
 
 
 
-</div>
+footer{
 
 
-</section>
+background:#5A0000;
 
+color:white;
 
+text-align:center;
 
+padding:20px;
 
 
+}
 
 
 
 
-<section id="contact">
 
 
-<h2>
-Liên hệ
-</h2>
+/* MOBILE MENU */
 
 
+@media(max-width:600px){
 
-<form class="contact-form">
 
 
-<input type="text" placeholder="Họ tên">
+.menu-toggle{
 
 
-<input type="email" placeholder="Email">
+display:inline-block;
 
 
-<textarea placeholder="Nội dung"></textarea>
+}
 
 
-<button class="cta">
 
-Gửi thông tin
 
-</button>
+.main-menu{
 
 
-</form>
+display:none;
 
+flex-direction:column;
 
-</section>
 
+}
 
 
 
 
+.main-menu.active{
 
-</main>
 
+display:flex;
 
 
+}
 
 
 
 
+.main-menu a{
 
-<footer>
 
+display:block;
 
-<p>
+margin:10px;
 
-© 2026 MyWeb - Ẩm thực Việt Nam
 
-</p>
+}
 
 
-</footer>
 
+#mainTitle{
 
 
+font-size:28px;
 
 
+}
 
 
-
-<script src="../js/script.js"></script>
-
-
-</body>
-
-
-</html>
+}
