@@ -1,9 +1,7 @@
 /* Reset */
 
 * {
-
     box-sizing: border-box;
-
 }
 
 
@@ -22,9 +20,17 @@ body {
 
     line-height: 1.6;
 
+    transition: 0.3s;
+
 }
 
 
+
+html {
+
+    scroll-behavior: smooth;
+
+}
 
 
 
@@ -48,8 +54,6 @@ body {
 
 
 
-
-
 /* Tiêu đề */
 
 #mainTitle {
@@ -66,9 +70,27 @@ body {
 
 
 
+/* Chọn chủ đề */
+
+#themeSelect {
+
+    padding: 10px;
+
+    margin: 15px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    font-size: 15px;
+
+}
 
 
-/* Nút menu thêm */
+
+
+
+/* Nút menu */
 
 .menu-toggle {
 
@@ -94,11 +116,8 @@ body {
 
 
 
+/* Menu */
 
-
-/* Navigation */
-
-.main-nav,
 .main-menu {
 
     background-color: #5A0000;
@@ -107,22 +126,25 @@ body {
 
     text-align: center;
 
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
 }
 
 
 
 
 
-
-
-.main-nav a,
 .main-menu a {
 
     color: white;
 
     text-decoration: none;
 
-    margin: 15px;
+    padding: 10px 15px;
 
     font-weight: bold;
 
@@ -132,9 +154,6 @@ body {
 
 
 
-
-
-.main-nav a:hover,
 .main-menu a:hover {
 
     color: #FFD166;
@@ -142,8 +161,6 @@ body {
     text-decoration: underline;
 
 }
-
-
 
 
 
@@ -162,6 +179,14 @@ main {
 }
 
 
+
+
+
+section {
+
+    margin-top: 30px;
+
+}
 
 
 
@@ -187,8 +212,6 @@ main {
 
 
 
-
-
 .description {
 
     text-align: center;
@@ -196,8 +219,6 @@ main {
     font-size: 18px;
 
 }
-
-
 
 
 
@@ -211,13 +232,9 @@ main {
 
     padding: 20px;
 
-    margin-top: 20px;
-
     border-radius: 10px;
 
 }
-
-
 
 
 
@@ -237,8 +254,6 @@ main {
 
 
 
-
-
 .topic-list li {
 
     margin: 10px;
@@ -248,10 +263,6 @@ main {
 
 
 
-
-
-
-/* Ẩn hiện bằng JS */
 
 .hidden {
 
@@ -263,9 +274,7 @@ main {
 
 
 
-
-
-/* Bảng phong cách */
+/* Phong cách */
 
 #style-guide {
 
@@ -273,13 +282,9 @@ main {
 
     padding: 20px;
 
-    margin-top: 20px;
-
     border-radius: 10px;
 
 }
-
-
 
 
 
@@ -295,8 +300,6 @@ main {
 
 
 
-
-
 .style-image {
 
     width: 45%;
@@ -306,8 +309,6 @@ main {
     border-radius: 10px;
 
 }
-
-
 
 
 
@@ -331,8 +332,6 @@ main {
 
 
 
-
-
 .gallery figure {
 
     width: 300px;
@@ -351,19 +350,15 @@ main {
 
 
 
-
-
 .gallery img {
 
     width: 100%;
 
-    height: auto;
+    height: 220px;
 
-    display: block;
+    object-fit: cover;
 
 }
-
-
 
 
 
@@ -376,8 +371,6 @@ figcaption {
     padding: 10px;
 
 }
-
-
 
 
 
@@ -403,10 +396,9 @@ figcaption {
 
 
 
-
-
 .contact-form input,
 .contact-form textarea {
+
 
     padding: 12px;
 
@@ -422,8 +414,6 @@ figcaption {
 
 
 
-
-
 .contact-form textarea {
 
     height: 120px;
@@ -434,6 +424,18 @@ figcaption {
 
 
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+
+    outline: none;
+
+    border-color: #8B0000;
+
+}
+
+
+
 
 
 /* Nút */
@@ -441,6 +443,7 @@ figcaption {
 .cta,
 #helloBtn,
 #toggleAboutBtn {
+
 
     background-color: #E63946;
 
@@ -456,9 +459,9 @@ figcaption {
 
     font-size: 16px;
 
+    transition: 0.3s;
+
 }
-
-
 
 
 
@@ -468,15 +471,12 @@ figcaption {
 #helloBtn:hover,
 #toggleAboutBtn:hover {
 
+
     background-color: #C1121F;
 
     transform: scale(1.05);
 
-    transition: 0.3s;
-
 }
-
-
 
 
 
@@ -485,6 +485,7 @@ figcaption {
 /* Footer */
 
 footer {
+
 
     background-color: #5A0000;
 
@@ -502,17 +503,95 @@ footer {
 
 
 
+/* Chủ đề tối */
+
+.dark-mode {
 
 
-/* Menu active */
+    background-color: #111827;
 
-.main-menu.active {
-
-    display: flex;
+    color: #f8fafc;
 
 }
 
 
+
+
+
+.dark-mode .site-header {
+
+
+    background-color: #020617;
+
+}
+
+
+
+
+
+.dark-mode #about,
+.dark-mode #style-guide,
+.dark-mode .gallery figure {
+
+
+    background-color: #1e293b;
+
+    color: white;
+
+}
+
+
+
+
+
+.dark-mode .main-menu,
+.dark-mode footer {
+
+
+    background-color: #020617;
+
+}
+
+
+
+
+
+
+
+/* Chủ đề ấm */
+
+.warm-mode {
+
+
+    background-color: #fff7ed;
+
+    color: #7c2d12;
+
+}
+
+
+
+
+
+.warm-mode .site-header {
+
+
+    background-color: #c2410c;
+
+}
+
+
+
+
+
+.warm-mode #about,
+.warm-mode #style-guide,
+.warm-mode .gallery figure {
+
+
+    background-color: #ffedd5;
+
+}
 
 
 
@@ -520,28 +599,24 @@ footer {
 
 /* Tablet */
 
-@media (max-width: 900px) {
+@media (max-width:900px){
 
 
     .gallery figure {
 
-        width: 45%;
+        width:45%;
 
     }
 
 
-
     .style-image {
 
-        width: 70%;
+        width:70%;
 
     }
 
 
 }
-
-
-
 
 
 
@@ -550,55 +625,51 @@ footer {
 
 /* Điện thoại */
 
-@media (max-width: 600px) {
-
+@media(max-width:600px){
 
 
     #mainTitle {
 
-        font-size: 28px;
+        font-size:28px;
 
     }
 
 
 
 
-
-    /* hiện nút menu */
 
     .menu-toggle {
 
-        display: inline-block;
 
-        margin-top: 15px;
+        display:inline-block;
+
+        margin-top:15px;
 
     }
 
 
 
 
-
-
-    /* menu đóng */
 
     .main-menu {
 
-        display: none;
 
-        flex-direction: column;
+        display:none;
+
+        flex-direction:column;
+
+        gap:5px;
 
     }
 
 
 
 
-
-
-    /* menu mở bằng JS */
 
     .main-menu.active {
 
-        display: flex;
+
+        display:flex;
 
     }
 
@@ -606,16 +677,12 @@ footer {
 
 
 
-
-    .main-nav a,
     .main-menu a {
 
-        margin: 5px;
 
-        display: block;
+        display:block;
 
     }
-
 
 
 
@@ -623,10 +690,10 @@ footer {
 
     main {
 
-        width: 95%;
+
+        width:95%;
 
     }
-
 
 
 
@@ -634,10 +701,10 @@ footer {
 
     .hero {
 
-        width: 100%;
+
+        width:100%;
 
     }
-
 
 
 
@@ -645,10 +712,10 @@ footer {
 
     .gallery {
 
-        flex-direction: column;
+
+        flex-direction:column;
 
     }
-
 
 
 
@@ -656,10 +723,10 @@ footer {
 
     .gallery figure {
 
-        width: 100%;
+
+        width:100%;
 
     }
-
 
 
 
@@ -667,64 +734,10 @@ footer {
 
     .style-image {
 
-        width: 100%;
+
+        width:100%;
 
     }
 
-
-}
-/* Chủ đề tối */
-
-.dark-mode {
-
-    background-color:#111827;
-
-    color:#f8fafc;
-
-}
-
-
-.dark-mode .site-header {
-
-    background-color:#020617;
-
-}
-
-
-.dark-mode #about,
-.dark-mode #style-guide,
-.dark-mode .gallery figure {
-
-    background-color:#1e293b;
-
-    color:white;
-
-}
-
-
-
-/* Chủ đề ấm */
-
-.warm-mode {
-
-    background-color:#fff7ed;
-
-    color:#7c2d12;
-
-}
-
-
-.warm-mode .site-header {
-
-    background-color:#c2410c;
-
-}
-
-
-.warm-mode #about,
-.warm-mode #style-guide,
-.warm-mode .gallery figure {
-
-    background-color:#ffedd5;
 
 }
