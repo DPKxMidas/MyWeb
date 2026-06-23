@@ -1,32 +1,24 @@
-// =======================
-// 1. Khai báo thông tin website
-// =======================
-
+// Console
 
 const siteName = "Ẩm thực Việt Nam";
 
-
-let topic = "Khám phá hương vị truyền thống và văn hóa món ăn Việt";
-
+let topic = "Khám phá món ăn truyền thống";
 
 let imageCount = 5;
-
 
 let isReady = true;
 
 
 
+console.log("Website:",siteName);
 
-console.log("Website:", siteName);
+console.log("Chủ đề:",topic);
 
-console.log("Chủ đề:", topic);
+console.log("Số ảnh:",imageCount);
 
-console.log("Số ảnh:", imageCount);
+console.log("Đã sẵn sàng dùng JS?",isReady);
 
-console.log("Đã sẵn sàng dùng JS?", isReady);
-
-console.log("Kiểu dữ liệu topic:", typeof topic);
-
+console.log("Kiểu dữ liệu:",typeof topic);
 
 
 
@@ -34,28 +26,27 @@ console.log("Kiểu dữ liệu topic:", typeof topic);
 
 
 
-// =======================
-// 2. Thay đổi nội dung tiêu đề bằng JS
-// =======================
+// Đổi nội dung
 
 
-const mainTitle = document.getElementById("mainTitle");
+const mainTitle =
+document.getElementById("mainTitle");
 
 
-const welcomeText = document.getElementById("welcomeText");
-
-
-
-if (mainTitle && welcomeText) {
-
-
-    mainTitle.textContent =
-    "Ẩm thực Việt Nam đã có JavaScript!";
+const welcomeText =
+document.getElementById("welcomeText");
 
 
 
-    welcomeText.textContent =
-    "Chào mừng bạn khám phá những món ngon Việt Nam.";
+if(mainTitle && welcomeText){
+
+
+mainTitle.textContent =
+"Ẩm thực Việt Nam đã có JavaScript!";
+
+
+welcomeText.textContent =
+"Chào mừng bạn khám phá món ngon Việt Nam";
 
 
 }
@@ -67,34 +58,29 @@ if (mainTitle && welcomeText) {
 
 
 
+// Nút lời chào
 
 
-// =======================
-// 3. Nút lời chào
-// =======================
+const helloBtn =
+document.getElementById("helloBtn");
 
 
-const helloBtn = document.getElementById("helloBtn");
-
-
-const helloResult = document.getElementById("helloResult");
-
-
-
-if (helloBtn && helloResult) {
+const helloResult =
+document.getElementById("helloResult");
 
 
 
-    helloBtn.addEventListener("click", function () {
+if(helloBtn && helloResult){
 
 
-
-        helloResult.textContent =
-        "Cảm ơn bạn đã ghé thăm website Ẩm thực Việt Nam!";
+helloBtn.addEventListener("click",function(){
 
 
+helloResult.textContent =
+"Cảm ơn bạn đã ghé thăm website Ẩm thực Việt Nam!";
 
-    });
+
+});
 
 
 }
@@ -106,16 +92,11 @@ if (helloBtn && helloResult) {
 
 
 
-
-
-// =======================
-// 4. Ẩn / hiện phần giới thiệu
-// =======================
+// Ẩn hiện giới thiệu
 
 
 const toggleAboutBtn =
 document.getElementById("toggleAboutBtn");
-
 
 
 const aboutContent =
@@ -123,19 +104,16 @@ document.getElementById("aboutContent");
 
 
 
-if (toggleAboutBtn && aboutContent) {
+if(toggleAboutBtn && aboutContent){
 
 
-
-    toggleAboutBtn.addEventListener("click", function () {
-
+toggleAboutBtn.addEventListener("click",function(){
 
 
-        aboutContent.classList.toggle("hidden");
+aboutContent.classList.toggle("hidden");
 
 
-
-    });
+});
 
 
 }
@@ -147,16 +125,11 @@ if (toggleAboutBtn && aboutContent) {
 
 
 
-
-
-// =======================
-// 5. Menu mobile
-// =======================
+// MENU MỞ ĐÓNG
 
 
 const menuToggle =
 document.getElementById("menuToggle");
-
 
 
 const mainMenu =
@@ -164,50 +137,38 @@ document.getElementById("mainMenu");
 
 
 
-
-if (menuToggle && mainMenu) {
-
-
-
-    menuToggle.addEventListener("click", function () {
+if(menuToggle && mainMenu){
 
 
 
-        // Thêm / xóa class active
+menuToggle.addEventListener("click",function(){
 
-        mainMenu.classList.toggle("active");
+
+
+mainMenu.classList.toggle("active");
 
 
 
 
-
-        // Đổi chữ nút menu
-
+if(mainMenu.classList.contains("active")){
 
 
-        if (mainMenu.classList.contains("active")) {
+menuToggle.textContent =
+"Đóng menu";
 
 
-
-            menuToggle.textContent =
-            "Đóng menu";
+}else{
 
 
+menuToggle.textContent =
+"☰ Menu";
 
-        } else {
 
-
-
-            menuToggle.textContent =
-            "☰ Menu";
+}
 
 
 
-        }
-
-
-
-    });
+});
 
 
 
@@ -215,41 +176,34 @@ if (menuToggle && mainMenu) {
 
 
 
+// click link tự đóng menu
 
 
-    // =======================
-    // Tự đóng menu khi chọn link
-    // =======================
-
-
-
-    const menuLinks =
-    mainMenu.querySelectorAll("a");
+const links =
+mainMenu.querySelectorAll("a");
 
 
 
-    menuLinks.forEach(function(link) {
+links.forEach(function(link){
 
 
 
-        link.addEventListener("click", function() {
+link.addEventListener("click",function(){
 
 
 
-            mainMenu.classList.remove("active");
+mainMenu.classList.remove("active");
+
+
+menuToggle.textContent =
+"☰ Menu";
+
+
+});
 
 
 
-            menuToggle.textContent =
-            "☰ Menu";
-
-
-
-        });
-
-
-
-    });
+});
 
 
 
