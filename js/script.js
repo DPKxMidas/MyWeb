@@ -208,3 +208,38 @@ menuToggle.textContent =
 
 
 }
+// Đổi giao diện
+
+const themeSelect =
+document.getElementById("themeSelect");
+
+
+if(themeSelect){
+
+
+themeSelect.addEventListener("change",function(){
+
+
+document.body.classList.remove(
+"dark-mode",
+"warm-mode"
+);
+
+
+
+if(themeSelect.value !== ""){
+
+
+document.body.classList.add(
+themeSelect.value
+);
+
+
+}
+
+
+
+});
+
+
+}
