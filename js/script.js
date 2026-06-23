@@ -42,7 +42,7 @@ if(mainTitle && welcomeText){
 
 
 mainTitle.textContent =
-"Ẩm thực Việt Nam đã có JavaScript!";
+"Ẩm thực Việt Nam ";
 
 
 welcomeText.textContent =
